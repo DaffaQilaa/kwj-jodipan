@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Kampung Warna-Warni Jodipan</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* bg-slate-50 */
+        }
+        
+        /* Animasi fade-in-up */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-load {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Navigasi (Sama seperti Homepage) -->
+    <header class="sticky top-0 left-0 right-0 z-50 p-4 bg-slate-900 bg-opacity-80 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto flex justify-between items-center text-white">
+             <!-- Logo Gambar Baru -->
+            <a href="index.html" class="transition-transform hover:scale-105">
+                <!-- Ganti src dengan path logo Anda. Ukuran direkomendasikan 120x50px -->
+                <img src="https://placehold.co/120x50/fbbf24/1e293b?text=LOGO" alt="Logo Kampung Jodipan" class="h-10">
+            </a>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-yellow-300 font-semibold transition-colors">Beranda</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition-colors">Galeri</a>
+                <a href="about.html" class="hover:text-yellow-300 transition-colors">Tentang Kami</a>
+                <a href="blog.html" class="hover:text-yellow-300 transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition-colors">Kontak</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menu Overlay Mobile (Sama seperti Homepage) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-900 bg-opacity-95 z-50 hidden flex-col items-center justify-center text-white">
+        <button id="close-menu-button" class="absolute top-5 right-5">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <nav class="flex flex-col space-y-8 text-2xl text-center">
+            <a href="index.html" class="text-yellow-300 font-semibold transition-colors">Beranda</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition-colors">Galeri</a>
+                <a href="about.html" class="hover:text-yellow-300 transition-colors">Tentang Kami</a>
+                <a href="blog.html" class="hover:text-yellow-300 transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition-colors">Kontak</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="bg-slate-800 text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center animate-on-load">
+                <h1 class="text-4xl md:text-5xl font-extrabold">Dari Abu-abu ke Pelangi Harapan</h1>
+                <p class="text-lg md:text-xl mt-4 text-slate-300 max-w-3xl mx-auto">Mengenal lebih dalam transformasi dan semangat yang membangun Kampung Warna-Warni Jodipan.</p>
+            </div>
+        </section>
+
+        <!-- Sejarah Jodipan -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="animate-on-load" style="animation-delay: 200ms;">
+                        <h2 class="text-3xl font-bold text-slate-800 mb-4">Dari Bantaran Sungai Menjadi Kanvas Raksasa</h2>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Jauh sebelum dikenal sebagai destinasi wisata, Jodipan adalah pemukiman padat di bantaran Sungai Brantas yang seringkali dipandang sebelah mata. Namun, semua mulai berubah pada tahun 2016. Sekelompok mahasiswa komunikasi dari Universitas Muhammadiyah Malang memiliki sebuah gagasan cemerlang.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Terinspirasi oleh favela di Rio de Janeiro, mereka menginisiasi sebuah proyek sosial untuk mengubah wajah kampung dengan cat warna-warni. Bekerja sama dengan perusahaan cat dan partisipasi aktif warga, proyek ini bukan hanya mengecat rumah, tetapi juga melukis harapan dan masa depan baru bagi seluruh komunitas Jodipan.
+                        </p>
+                    </div>
+                    <div class="animate-on-load" style="animation-delay: 400ms;">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="https://placehold.co/600x800/64748b/white?text=Kondisi+Sebelumnya" alt="Kondisi Jodipan sebelum dicat" class="rounded-lg shadow-lg w-full h-full object-cover">
+                            <img src="https://placehold.co/600x800/fbbf24/white?text=Transformasi+Dimulai" alt="Proses pengecatan Jodipan" class="rounded-lg shadow-lg w-full h-full object-cover mt-8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visi & Misi -->
+        <section class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-800">Tujuan dan Impian Kami</h2>
+                    <p class="text-lg text-gray-600 mt-2">Prinsip yang menjadi pemandu langkah kami.</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
+                    <!-- Visi -->
+                    <div class="text-center md:text-left">
+                        <div class="flex justify-center md:justify-start items-center mb-3">
+                             <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                                <i data-lucide="eye" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold ml-4 text-slate-700">Visi</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Menjadi destinasi wisata berbasis komunitas yang mandiri, kreatif, dan mampu menginspirasi perubahan sosial positif di tingkat nasional maupun internasional.
+                        </p>
+                    </div>
+                    <!-- Misi -->
+                    <div class="text-center md:text-left">
+                         <div class="flex justify-center md:justify-start items-center mb-3">
+                            <div class="bg-green-100 text-green-600 p-3 rounded-full">
+                                <i data-lucide="target" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold ml-4 text-slate-700">Misi</h3>
+                        </div>
+                        <ul class="list-inside text-gray-600 space-y-2">
+                           <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0"></i>Memberdayakan ekonomi warga melalui pariwisata.</li>
+                           <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0"></i>Menjaga kebersihan dan kelestarian lingkungan kampung.</li>
+                           <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0"></i>Menyediakan pengalaman yang otentik dan berkesan bagi pengunjung.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tim Pengelola Section (BARU) -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 animate-on-scroll fade-in-up">
+                    <h2 class="text-3xl font-bold text-slate-800">Tim di Balik Layar</h2>
+                    <p class="text-lg text-gray-600 mt-2">Orang-orang yang berdedikasi menjaga dan mengembangkan Jodipan.</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12">
+                    <div class="text-center animate-on-scroll fade-in-up">
+                        <img src="https://placehold.co/400x400/94a3b8/334155?text=Foto" alt="Foto Pembina dari UMM" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
+                        <h4 class="text-xl font-bold text-slate-800">Dr. Jamroji</h4>
+                        <p class="text-gray-500">Pembina dari UMM</p>
+                    </div>
+                     <div class="text-center animate-on-scroll fade-in-up" style="transition-delay: 100ms;">
+                        <img src="https://placehold.co/400x400/94a3b8/334155?text=Foto" alt="Foto Ketua RW" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
+                        <h4 class="text-xl font-bold text-slate-800">Bapak Parin</h4>
+                        <p class="text-gray-500">Ketua RW</p>
+                    </div>
+                    <div class="text-center animate-on-scroll fade-in-up" style="transition-delay: 200ms;">
+                        <img src="https://placehold.co/400x400/94a3b8/334155?text=Foto" alt="Foto Ketua RT" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
+                        <h4 class="text-xl font-bold text-slate-800">Bapak Subandi</h4>
+                        <p class="text-gray-500">Ketua RT</p>
+                    </div>
+                     <div class="text-center animate-on-scroll fade-in-up" style="transition-delay: 300ms;">
+                        <img src="https://placehold.co/400x400/94a3b8/334155?text=Foto" alt="Foto Sekretariat" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
+                        <h4 class="text-xl font-bold text-slate-800">Ibu Siti Aminah</h4>
+                        <p class="text-gray-500">Kesekretariatan</p>
+                    </div>
+                    <div class="text-center animate-on-scroll fade-in-up">
+                        <img src="https://placehold.co/400x400/94a3b8/334155?text=Foto" alt="Foto Bendahara" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
+                        <h4 class="text-xl font-bold text-slate-800">Ibu Endang</h4>
+                        <p class="text-gray-500">Bendahara</p>
+                    </div>
+                    <div class="text-center animate-on-scroll fade-in-up" style="transition-delay: 100ms;">
+                        <img src="https://placehold.co/400x400/94a3b8/334155?text=Foto" alt="Foto Keamanan" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
+                        <h4 class="text-xl font-bold text-slate-800">Bapak Yudi</h4>
+                        <p class="text-gray-500">Koordinator Keamanan</p>
+                    </div>
+                    <div class="text-center animate-on-scroll fade-in-up" style="transition-delay: 200ms;">
+                        <img src="https://placehold.co/400x400/94a3b8/334155?text=Foto" alt="Foto Kebersihan" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
+                        <h4 class="text-xl font-bold text-slate-800">Bapak Slamet</h4>
+                        <p class="text-gray-500">Koordinator Kebersihan</p>
+                    </div>
+                     <div class="text-center animate-on-scroll fade-in-up" style="transition-delay: 300ms;">
+                        <img src="https://placehold.co/400x400/94a3b8/334155?text=Foto" alt="Foto Humas" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
+                        <h4 class="text-xl font-bold text-slate-800">Mas Bima</h4>
+                        <p class="text-gray-500">Hubungan Masyarakat</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dampak Sosial & Ekonomi -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-800">Buah dari Kreativitas</h2>
+                    <p class="text-lg text-gray-600 mt-2">Bagaimana pariwisata mengubah kehidupan di Jodipan.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Dampak 1 -->
+                    <div class="bg-slate-50 p-8 rounded-xl">
+                        <div class="bg-yellow-100 text-yellow-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="trending-up" class="w-10 h-10"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2 text-slate-800">Peningkatan Ekonomi</h4>
+                        <p class="text-gray-600">Terbukanya warung, toko suvenir, dan jasa parkir yang dikelola langsung oleh warga, meningkatkan pendapatan keluarga secara signifikan.</p>
+                    </div>
+                    <!-- Dampak 2 -->
+                    <div class="bg-slate-50 p-8 rounded-xl">
+                        <div class="bg-red-100 text-red-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="sparkles" class="w-10 h-10"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2 text-slate-800">Kebanggaan Komunitas</h4>
+                        <p class="text-gray-600">Warga menjadi lebih bangga akan tempat tinggalnya, menumbuhkan rasa memiliki dan semangat gotong royong untuk menjaga keindahan kampung.</p>
+                    </div>
+                    <!-- Dampak 3 -->
+                    <div class="bg-slate-50 p-8 rounded-xl">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="image" class="w-10 h-10"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2 text-slate-800">Perubahan Citra</h4>
+                        <p class="text-gray-600">Mengubah citra dari pemukiman kumuh menjadi destinasi wisata kreatif yang dikenal luas dan menginspirasi banyak daerah lain.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Sama seperti Homepage) -->
+    <footer class="bg-slate-800 text-slate-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Kampung Warna-Warni Jodipan. Semua Hak Cipta Dilindungi.</p>
+            <p class="text-sm text-slate-400 mt-2">Didesain dengan ❤️ di Malang.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Inisialisasi Lucide Icons
+        lucide.createIcons();
+
+        // --- Logika Menu Mobile ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+        });
+
+        const closeMenu = () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        }
+
+        closeMenuButton.addEventListener('click', closeMenu);
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
+
+</body>
+</html>
+<script>
+    // Animasi fade-in untuk elemen yang memiliki kelas animate-on-load
+    document.addEventListener('DOMContentLoaded', () => {
+        const animatedElements = document.querySelectorAll('.animate-on-load');
+        animatedElements.forEach((el, index) => {
+            el.style.animationDelay = `${index * 100}ms`;
+            el.classList.add('animate');
+        });
+    });
+</script>
+<script>

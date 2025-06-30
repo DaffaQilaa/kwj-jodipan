@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Kunjungan - Kampung Warna-Warni Jodipan</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        .fade-in-up {
+            transform: translateY(20px);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Navigasi -->
+    <header class="sticky top-0 left-0 right-0 z-50 p-4 bg-slate-900 bg-opacity-80 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto flex justify-between items-center text-white">
+             <!-- Logo Gambar Baru -->
+            <a href="index.html" class="transition-transform hover:scale-105">
+                <!-- Ganti src dengan path logo Anda. Ukuran direkomendasikan 120x50px -->
+                <img src="https://placehold.co/120x50/fbbf24/1e293b?text=LOGO" alt="Logo Kampung Jodipan" class="h-10">
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="hover:text-yellow-300 transition-colors">Beranda</a>
+                <a href="about.html" class="hover:text-yellow-300 transition-colors">Tentang Kami</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition-colors">Kontak</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+    </header>
+
+    <!-- Menu Overlay Mobile -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-900 bg-opacity-95 z-50 hidden flex-col items-center justify-center text-white">
+        <button id="close-menu-button" class="absolute top-5 right-5"><i data-lucide="x" class="w-8 h-8"></i></button>
+        <nav class="flex flex-col space-y-8 text-2xl text-center">
+             <a href="index.html" class="mobile-nav-link hover:text-yellow-300">Beranda</a>
+             <a href="about.html" class="mobile-nav-link hover:text-yellow-300">Tentang Kami</a>
+             <a href="contact.html" class="mobile-nav-link hover:text-yellow-300">Kontak</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="bg-blue-600 text-white py-20 md:py-24">
+            <div class="container mx-auto px-6 text-center" style="animation: fadeInUp 0.8s ease-out;">
+                <h1 class="text-4xl md:text-5xl font-extrabold">Informasi Kunjungan</h1>
+                <p class="text-lg md:text-xl mt-4 text-blue-200 max-w-3xl mx-auto">Semua yang perlu Anda ketahui sebelum berkunjung ke Kampung Warna-Warni Jodipan.</p>
+            </div>
+        </section>
+
+        <div class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-3 gap-12">
+                    <!-- Kolom Utama -->
+                    <div class="lg:col-span-2 space-y-16">
+                        <!-- Harga Tiket & Jam Operasional -->
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="animate-on-scroll fade-in-up">
+                                <h2 class="text-3xl font-bold text-slate-800 mb-4 flex items-center"><i data-lucide="ticket" class="w-8 h-8 mr-3 text-blue-600"></i>Harga Tiket</h2>
+                                <div class="bg-white p-6 rounded-lg shadow-md space-y-4">
+                                    <div class="flex justify-between items-center">
+                                        <p class="text-lg text-gray-700">Turis Domestik / Anak</p>
+                                        <p class="text-xl font-bold text-blue-600">Rp 5.000</p>
+                                    </div>
+                                    <div class="border-t my-2"></div>
+                                    <div class="flex justify-between items-center">
+                                        <p class="text-lg text-gray-700">Turis Mancanegara</p>
+                                        <p class="text-xl font-bold text-blue-600">Rp 10.000</p>
+                                    </div>
+                                    <p class="text-sm text-gray-500 pt-2"><i data-lucide="info" class="w-4 h-4 inline-block mr-1"></i>Pembayaran saat ini hanya menerima tunai. Tiket termasuk akses ke Kampung Tridi.</p>
+                                </div>
+                            </div>
+                             <div class="animate-on-scroll fade-in-up">
+                                <h2 class="text-3xl font-bold text-slate-800 mb-4 flex items-center"><i data-lucide="clock" class="w-8 h-8 mr-3 text-blue-600"></i>Jam Operasional</h2>
+                                <div class="bg-white p-6 rounded-lg shadow-md space-y-4">
+                                     <div class="flex justify-between items-center">
+                                        <p class="text-lg text-gray-700">Setiap Hari</p>
+                                        <p class="text-xl font-bold text-blue-600">07:00 - 18:00 WIB</p>
+                                    </div>
+                                    <div class="border-t my-2"></div>
+                                    <p class="text-sm text-gray-500 pt-2"><i data-lucide="info" class="w-4 h-4 inline-block mr-1"></i>Jam operasional tetap sama pada hari libur nasional, kecuali ada pengumuman khusus.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Akses & Transportasi -->
+                        <div class="animate-on-scroll fade-in-up">
+                            <h2 class="text-3xl font-bold text-slate-800 mb-4 flex items-center"><i data-lucide="bus" class="w-8 h-8 mr-3 text-blue-600"></i>Akses & Transportasi</h2>
+                            <div class="bg-white p-6 rounded-lg shadow-md text-lg text-gray-700 leading-relaxed space-y-2">
+                                <p><strong>Kendaraan Pribadi:</strong> Anda dapat menggunakan Google Maps menuju "Kampung Warna Warni Jodipan". Area parkir tersedia di sekitar pintu masuk.</p>
+                                <p><strong>Transportasi Umum (Angkot):</strong> Dari terminal Arjosari, cari angkot dengan kode ADL atau AL. Turun di dekat Jembatan Brantas atau Stasiun Kota Malang, lalu berjalan kaki sekitar 5-10 menit.</p>
+                                <p><strong>Ojek/Taksi Online:</strong> Titik penjemputan dan penurunan paling mudah adalah di pintu masuk utama di Jalan Juanda.</p>
+                            </div>
+                        </div>
+
+                        <!-- Lokasi & Peta -->
+                        <div class="animate-on-scroll fade-in-up">
+                             <h2 class="text-3xl font-bold text-slate-800 mb-4 flex items-center"><i data-lucide="map" class="w-8 h-8 mr-3 text-blue-600"></i>Lokasi & Peta</h2>
+                             <p class="text-lg text-gray-600 mb-4"><strong>Alamat:</strong> Jalan Temenggungan Ledok, Jodipan, Kec. Blimbing, Kota Malang, Jawa Timur 65126</p>
+                             <div class="rounded-lg overflow-hidden shadow-md">
+                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.423982998348!2d112.6334378748366!3d-7.95511009206307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629e068c262e1%3A0x440cf355815638a1!2sKampung%20Warna%20Warni%20Jodipan!5e0!3m2!1sen!2sid!4v1719138676575!5m2!1sen!2sid" 
+                                 width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Kolom Sidebar -->
+                    <aside class="lg:col-span-1 space-y-12">
+                        <!-- Fasilitas -->
+                        <div class="sticky top-28 space-y-12">
+                            <div class="animate-on-scroll fade-in-up">
+                                <h3 class="text-3xl font-bold text-slate-800 mb-4">Fasilitas</h3>
+                                <div class="bg-white p-6 rounded-lg shadow-md space-y-4">
+                                    <div class="flex items-center text-lg"><i data-lucide="parking-circle" class="w-6 h-6 mr-3 text-blue-600"></i>Area Parkir</div>
+                                    <div class="flex items-center text-lg"><i data-lucide="home" class="w-6 h-6 mr-3 text-blue-600"></i>Mushola</div>
+                                    <div class="flex items-center text-lg"><i data-lucide="utensils" class="w-6 h-6 mr-3 text-blue-600"></i>Warung Makan & Minum</div>
+                                    <div class="flex items-center text-lg"><i data-lucide="shopping-basket" class="w-6 h-6 mr-3 text-blue-600"></i>Toko Suvenir</div>
+                                    <div class="flex items-center text-lg"><i data-lucide="toilet" class="w-6 h-6 mr-3 text-blue-600"></i>Toilet Umum</div>
+                                </div>
+                            </div>
+                            <!-- Tips Berkunjung -->
+                            <div class="animate-on-scroll fade-in-up">
+                                <h3 class="text-3xl font-bold text-slate-800 mb-4">Tips Berkunjung</h3>
+                                <div class="bg-white p-6 rounded-lg shadow-md space-y-4">
+                                    <div class="flex items-start"><i data-lucide="sun" class="w-7 h-7 mr-3 text-blue-600 flex-shrink-0"></i><p>Datanglah di pagi atau sore hari untuk cuaca yang lebih sejuk dan cahaya foto terbaik.</p></div>
+                                    <div class="flex items-start"><i data-lucide="footprints" class="w-7 h-7 mr-3 text-blue-600 flex-shrink-0"></i><p>Gunakan sepatu yang nyaman karena Anda akan banyak berjalan kaki menaiki dan menuruni tangga.</p></div>
+                                    <div class="flex items-start"><i data-lucide="trash-2" class="w-7 h-7 mr-3 text-blue-600 flex-shrink-0"></i><p>Selalu jaga kebersihan dengan membuang sampah pada tempatnya.</p></div>
+                                    <div class="flex items-start"><i data-lucide="smile" class="w-7 h-7 mr-3 text-blue-600 flex-shrink-0"></i><p>Jangan ragu untuk berinteraksi dan tersenyum kepada warga lokal.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Kampung Warna-Warni Jodipan. Semua Hak Cipta Dilindungi.</p>
+            <p class="text-sm text-slate-400 mt-2">Didesain dengan ❤️ di Malang.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Inisialisasi Lucide Icons
+        lucide.createIcons();
+
+        // --- Logika Menu Mobile ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.remove('hidden'); mobileMenu.classList.add('flex'); });
+        const closeMenu = () => { mobileMenu.classList.add('hidden'); mobileMenu.classList.remove('flex'); }
+        closeMenuButton.addEventListener('click', closeMenu);
+        document.querySelectorAll('.mobile-nav-link').forEach(link => link.addEventListener('click', closeMenu));
+
+        // --- Logika Animasi saat Scroll ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+<!-- End of information.html -->

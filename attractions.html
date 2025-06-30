@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daya Tarik & Aktivitas - Kampung Warna-Warni Jodipan</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        /* Animasi */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        .fade-in-up {
+            transform: translateY(20px);
+        }
+
+        /* Peta Interaktif */
+        .map-spot-button.active {
+            background-color: #f59e0b; /* bg-amber-500 */
+            color: white;
+            transform: translateX(10px);
+        }
+        .map-spot-button {
+             transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="sticky top-0 left-0 right-0 z-50 p-4 bg-slate-900 bg-opacity-80 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto flex justify-between items-center text-white">
+            <a href="index.html" class="text-xl font-bold tracking-wider">JODIPAN</a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="text-yellow-300 font-semibold transition-colors">Beranda</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition-colors">Galeri</a>
+                <a href="about.html" class="hover:text-yellow-300 transition-colors">Tentang Kami</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition-colors">Kontak</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-900 bg-opacity-95 z-50 hidden flex-col items-center justify-center text-white">
+        <button id="close-menu-button" class="absolute top-5 right-5"><i data-lucide="x" class="w-8 h-8"></i></button>
+        <nav class="flex flex-col space-y-8 text-2xl text-center">
+                <a href="index.html" class="text-yellow-300 font-semibold transition-colors">Beranda</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition-colors">Galeri</a>
+                <a href="about.html" class="hover:text-yellow-300 transition-colors">Tentang Kami</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition-colors">Kontak</a>
+        </nav>
+    </div>
+
+    <main>
+        <section class="bg-cover bg-center text-white py-20 md:py-32" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1920x600/10b981/white?text=Jelajahi+Jodipan');">
+            <div class="container mx-auto px-6 text-center" style="animation: fadeInUp 0.8s ease-out;">
+                <h1 class="text-4xl md:text-5xl font-extrabold">Jelajahi Setiap Sudut Keajaiban</h1>
+                <p class="text-lg md:text-xl mt-4 text-slate-200 max-w-3xl mx-auto">Temukan spot foto ikonik dan aktivitas menarik yang tak akan terlupakan di Kampung Warna-Warni Jodipan.</p>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 animate-on-scroll fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Spot Foto Ikonik</h2>
+                    <p class="text-lg text-gray-600 mt-2">Jangan lewatkan tempat-tempat ini untuk mengabadikan momen Anda!</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll fade-in-up">
+                        <img src="https://placehold.co/800x500/ef4444/white?text=Jembatan+Kaca" alt="Jembatan Kaca Embong Brantas" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2">Jembatan Kaca Embong Brantas</h3>
+                            <p class="text-gray-600">Uji adrenalin Anda sambil menikmati pemandangan 360 derajat terbaik dari seluruh kampung. Jembatan ikonik ini menghubungkan Kampung Warna-Warni dengan Kampung Tridi di seberangnya.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll fade-in-up" style="transition-delay: 150ms;">
+                        <img src="https://placehold.co/800x500/f97316/white?text=Tembok+Warna-Warni" alt="Tembok Warna-warni" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2">Tembok Aneka Warna</h3>
+                            <p class="text-gray-600">Inilah jiwa dari kampung kami. Ratusan rumah dengan puluhan kombinasi warna cerah menciptakan latar belakang foto yang sempurna di setiap sudut dan lorong yang Anda lewati.</p>
+                        </div>
+                    </div>
+                     <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll fade-in-up">
+                        <img src="https://placehold.co/800x500/22d3ee/white?text=Payung+Gantung" alt="Lorong Payung Gantung" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2">Lorong Payung Gantung</h3>
+                            <p class="text-gray-600">Berjalan di bawah ratusan payung berwarna-warni yang menggantung meriah. Spot ini menciptakan suasana ceria dan menjadi salah satu lokasi favorit para pengunjung untuk berfoto.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll fade-in-up" style="transition-delay: 150ms;">
+                        <img src="https://placehold.co/800x500/8b5cf6/white?text=Mural+3D" alt="Mural 3D" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2">Mural 3D Interaktif</h3>
+                            <p class="text-gray-600">Temukan berbagai lukisan mural tiga dimensi yang menipu mata. Berpose dan jadilah bagian dari karya seni! Setiap mural memiliki tema unik yang akan membuat foto Anda lebih hidup.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 animate-on-scroll fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Lebih dari Sekadar Berfoto</h2>
+                    <p class="text-lg text-gray-600 mt-2">Rasakan pengalaman otentik dengan berbagai aktivitas menarik.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-xl shadow-lg animate-on-scroll fade-in-up">
+                        <div class="bg-green-100 text-green-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6"><i data-lucide="users" class="w-12 h-12"></i></div>
+                        <h4 class="text-2xl font-bold mb-2 text-slate-800">Interaksi dengan Warga</h4>
+                        <p class="text-gray-600">Sapa dan berbincang dengan warga lokal yang ramah. Dengarkan cerita mereka tentang transformasi kampung dan rasakan kehangatan komunitas kami.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg animate-on-scroll fade-in-up" style="transition-delay: 150ms;">
+                        <div class="bg-red-100 text-red-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6"><i data-lucide="utensils-crossed" class="w-12 h-12"></i></div>
+                        <h4 class="text-2xl font-bold mb-2 text-slate-800">Cicipi Kuliner Lokal</h4>
+                        <p class="text-gray-600">Jangan lewatkan kesempatan untuk mencoba jajanan dan makanan khas yang dijual di warung-warung kecil milik warga. Temukan cita rasa otentik Jodipan!</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg animate-on-scroll fade-in-up" style="transition-delay: 300ms;">
+                        <div class="bg-blue-100 text-blue-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6"><i data-lucide="shopping-basket" class="w-12 h-12"></i></div>
+                        <h4 class="text-2xl font-bold mb-2 text-slate-800">Beli Kerajinan Tangan</h4>
+                        <p class="text-gray-600">Dukung ekonomi lokal dengan membeli suvenir dan kerajinan tangan yang dibuat langsung oleh warga kampung. Bawa pulang kenang-kenangan unik dari Jodipan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 animate-on-scroll fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Peta Interaktif Jodipan</h2>
+                    <p class="text-lg text-gray-600 mt-2">Klik nama spot untuk melihat deskripsi dan lokasinya di peta.</p>
+                </div>
+                <div class="lg:grid lg:grid-cols-3 gap-8 items-start">
+                    <div class="lg:col-span-1 space-y-3 mb-8 lg:mb-0 animate-on-scroll fade-in-up">
+                        <button class="map-spot-button w-full text-left p-4 rounded-lg bg-white shadow-md font-semibold active" data-spot="jembatan">1. Jembatan Kaca</button>
+                        <button class="map-spot-button w-full text-left p-4 rounded-lg bg-white shadow-md font-semibold" data-spot="tembok">2. Tembok Warna-Warni</button>
+                        <button class="map-spot-button w-full text-left p-4 rounded-lg bg-white shadow-md font-semibold" data-spot="payung">3. Lorong Payung Gantung</button>
+                        <button class="map-spot-button w-full text-left p-4 rounded-lg bg-white shadow-md font-semibold" data-spot="mural">4. Mural 3D</button>
+                    </div>
+                    <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg animate-on-scroll fade-in-up" style="transition-delay: 150ms;">
+                        <div id="map-image-container" class="mb-6 rounded-lg overflow-hidden">
+                            <img src="https://placehold.co/1200x800/e0e7ff/3730a3?text=Peta+Jodipan+dengan+Spot+1" id="interactive-map-image" alt="Peta Interaktif Jodipan" class="w-full object-cover">
+                        </div>
+                        <div id="map-info-container">
+                            <div class="map-info" id="info-jembatan">
+                                <h3 class="text-2xl font-bold text-slate-800 mb-2">Jembatan Kaca</h3>
+                                <p class="text-gray-600">Spot ini adalah primadona utama. Berlokasi di tengah, menghubungkan dua kampung dan menjadi titik terbaik untuk melihat keseluruhan panorama.</p>
+                            </div>
+                            <div class="map-info hidden" id="info-tembok">
+                                <h3 class="text-2xl font-bold text-slate-800 mb-2">Tembok Warna-Warni</h3>
+                                <p class="text-gray-600">Area ini mencakup sebagian besar lorong utama kampung. Jelajahi saja setiap gang, Anda pasti akan menemukan kombinasi warna yang sempurna untuk foto Anda.</p>
+                            </div>
+                            <div class="map-info hidden" id="info-payung">
+                                <h3 class="text-2xl font-bold text-slate-800 mb-2">Lorong Payung Gantung</h3>
+                                <p class="text-gray-600">Terletak di salah satu gang utama setelah pintu masuk. Ikuti saja keramaian, Anda pasti akan menemukannya dengan mudah!</p>
+                            </div>
+                            <div class="map-info hidden" id="info-mural">
+                                <h3 class="text-2xl font-bold text-slate-800 mb-2">Mural 3D</h3>
+                                <p class="text-gray-600">Mural-mural ini tersebar di beberapa dinding di seluruh area kampung. Jadikan ini sebagai perburuan harta karun yang menyenangkan untuk menemukan semuanya!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Kampung Warna-Warni Jodipan. Semua Hak Cipta Dilindungi.</p>
+            <p class="text-sm text-slate-400 mt-2">Didesain dengan ❤️ di Malang.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Inisialisasi Lucide Icons
+        lucide.createIcons();
+
+        // --- Logika Menu Mobile ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.remove('hidden'); mobileMenu.classList.add('flex'); });
+        const closeMenu = () => { mobileMenu.classList.add('hidden'); mobileMenu.classList.remove('flex'); }
+        closeMenuButton.addEventListener('click', closeMenu);
+        document.querySelectorAll('.mobile-nav-link').forEach(link => link.addEventListener('click', closeMenu));
+
+        // --- Logika Animasi saat Scroll ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => { observer.observe(el); });
+
+        // --- Logika Peta Interaktif ---
+        const spotButtons = document.querySelectorAll('.map-spot-button');
+        const infoPanels = document.querySelectorAll('.map-info');
+        const mapImage = document.getElementById('interactive-map-image');
+        
+        const mapImageSources = {
+            jembatan: 'https://placehold.co/1200x800/ef4444/white?text=Lokasi+Jembatan+Kaca',
+            tembok: 'https://placehold.co/1200x800/f97316/white?text=Area+Tembok+Warna-Warni',
+            payung: 'https://placehold.co/1200x800/22d3ee/white?text=Lokasi+Payung+Gantung',
+            mural: 'https://placehold.co/1200x800/8b5cf6/white?text=Lokasi+Mural+3D'
+        };
+
+        spotButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const spot = button.dataset.spot;
+
+                // Update tombol aktif
+                spotButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Update panel info
+                infoPanels.forEach(panel => {
+                    if (panel.id === `info-${spot}`) {
+                        panel.classList.remove('hidden');
+                    } else {
+                        panel.classList.add('hidden');
+                    }
+                });
+
+                // Update gambar peta
+                if (mapImageSources[spot]) {
+                    mapImage.src = mapImageSources[spot];
+                }
+            });
+        });
+    </script>
+</body>
+</html>

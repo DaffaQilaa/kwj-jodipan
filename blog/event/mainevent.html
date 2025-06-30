@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori: Agenda Acara - Blog</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        /* Animasi */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        .fade-in-up {
+            transform: translateY(20px);
+        }
+
+        .blog-card:hover .blog-card-image {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Navigasi -->
+    <header class="sticky top-0 left-0 right-0 z-50 p-4 bg-slate-900 bg-opacity-80 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto flex justify-between items-center text-white">
+            <a href="#" class="text-xl font-bold tracking-wider">JODIPAN</a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="jodipan_homepage_v1.html" class="hover:text-yellow-300 transition-colors">Beranda</a>
+                <a href="jodipan_attractions_v1.html" class="hover:text-yellow-300 transition-colors">Daya Tarik</a>
+                <a href="jodipan_gallery_v1.html" class="hover:text-yellow-300 transition-colors">Galeri</a>
+                <a href="jodipan_about_us_v1.html" class="hover:text-yellow-300 transition-colors">Tentang Kami</a>
+                <a href="jodipan_blog_v1.html" class="text-yellow-300 font-semibold transition-colors">Blog</a>
+                <a href="jodipan_contact_v1.html" class="hover:text-yellow-300 transition-colors">Kontak</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+    </header>
+
+    <!-- Menu Overlay Mobile -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-900 bg-opacity-95 z-50 hidden flex-col items-center justify-center text-white">
+        <button id="close-menu-button" class="absolute top-5 right-5"><i data-lucide="x" class="w-8 h-8"></i></button>
+        <nav class="flex flex-col space-y-8 text-2xl text-center">
+            <a href="jodipan_homepage_v1.html" class="mobile-nav-link hover:text-yellow-300">Beranda</a>
+            <a href="jodipan_attractions_v1.html" class="mobile-nav-link hover:text-yellow-300">Daya Tarik</a>
+            <a href="jodipan_gallery_v1.html" class="mobile-nav-link hover:text-yellow-300">Galeri</a>
+            <a href="jodipan_about_us_v1.html" class="mobile-nav-link hover:text-yellow-300">Tentang Kami</a>
+            <a href="jodipan_blog_v1.html" class="mobile-nav-link text-yellow-300 font-semibold">Blog</a>
+            <a href="jodipan_contact_v1.html" class="mobile-nav-link hover:text-yellow-300">Kontak</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="bg-slate-100 py-20 md:py-24">
+            <div class="container mx-auto px-6 text-center" style="animation: fadeInUp 0.8s ease-out;">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800">Kategori: Agenda Acara</h1>
+                <p class="text-lg md:text-xl mt-4 text-gray-600 max-w-3xl mx-auto">Semua pengumuman dan jadwal acara khusus di Jodipan.</p>
+            </div>
+        </section>
+
+        <!-- Blog Content Section -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6 lg:flex lg:space-x-12">
+
+                <!-- Main Content: Blog Posts -->
+                <div class="lg:w-2/3">
+                    <div class="space-y-12">
+                        
+                        <!-- Post 1: Acara -->
+                        <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden transition-shadow hover:shadow-2xl animate-on-scroll fade-in-up">
+                            <div class="overflow-hidden">
+                                <a href="jodipan_blog_post_v1.html"><img src="https://placehold.co/800x500/8b5cf6/white?text=Festival+Budaya" alt="Festival Budaya Jodipan" class="blog-card-image w-full h-64 object-cover transition-transform duration-500"></a>
+                            </div>
+                            <div class="p-8">
+                                <div class="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-3 py-1 rounded-full mb-4">Agenda Acara</div>
+                                <h2 class="text-3xl font-bold mb-3"><a href="jodipan_blog_post_v1.html" class="text-slate-800 hover:text-purple-600">Festival Budaya Jodipan 2025</a></h2>
+                                <p class="text-gray-600 mb-4">Jangan lewatkan kemeriahan Festival Budaya tahunan kami! Akan ada pertunjukan tari tradisional, bazaar kuliner lokal, dan berbagai lomba menarik. Catat tanggalnya: 10-12 Agustus 2025.</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+                                    <span>Pengumuman: 23 Juni 2025</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Post 2: Acara (Contoh Tambahan) -->
+                        <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden transition-shadow hover:shadow-2xl animate-on-scroll fade-in-up">
+                            <div class="overflow-hidden">
+                                <a href="#"><img src="https://placehold.co/800x500/ec4899/white?text=Lomba+Fotografi" alt="Lomba Fotografi" class="blog-card-image w-full h-64 object-cover transition-transform duration-500"></a>
+                            </div>
+                            <div class="p-8">
+                                <div class="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-3 py-1 rounded-full mb-4">Agenda Acara</div>
+                                <h2 class="text-3xl font-bold mb-3"><a href="#" class="text-slate-800 hover:text-purple-600">Pendaftaran Lomba Fotografi "Wajah Jodipan" Dibuka!</a></h2>
+                                <p class="text-gray-600 mb-4">Panggilan untuk semua fotografer! Pendaftaran untuk lomba fotografi tahunan kami sekarang telah resmi dibuka. Tunjukkan kemampuan terbaikmu dan menangkan hadiah menarik!</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+                                    <span>Pengumuman: 1 Juli 2025</span>
+                                </div>
+                            </div>
+                        </article>
+                        
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 mt-12 lg:mt-0">
+                    <div class="sticky top-28 space-y-8">
+                        <!-- Search Widget -->
+                        <div class="bg-white p-6 rounded-xl shadow-lg animate-on-scroll fade-in-up">
+                            <h3 class="text-xl font-bold mb-4 text-slate-800">Cari Artikel</h3>
+                            <div class="relative">
+                                <input type="text" placeholder="Ketik di sini..." class="w-full border-gray-300 rounded-lg pr-10 focus:ring-amber-500 focus:border-amber-500">
+                                <i data-lucide="search" class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+
+                        <!-- Categories Widget -->
+                        <div class="bg-white p-6 rounded-xl shadow-lg animate-on-scroll fade-in-up">
+                            <h3 class="text-xl font-bold mb-4 text-slate-800">Kategori</h3>
+                            <ul class="space-y-3">
+                                <li><a href="#" class="flex justify-between items-center text-gray-600 hover:text-amber-600"><span>Artikel</span> <span class="bg-gray-100 text-xs font-semibold px-2 py-1 rounded">2</span></a></li>
+                                <li><a href="#" class="flex justify-between items-center text-gray-600 hover:text-amber-600"><span>Berita</span> <span class="bg-gray-100 text-xs font-semibold px-2 py-1 rounded">1</span></a></li>
+                                <li><a href="#" class="flex justify-between items-center font-semibold text-amber-600"><span>Agenda Acara</span> <span class="bg-amber-100 text-amber-700 text-xs font-semibold px-2 py-1 rounded">2</span></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Popular Posts Widget -->
+                        <div class="bg-white p-6 rounded-xl shadow-lg animate-on-scroll fade-in-up">
+                            <h3 class="text-xl font-bold mb-4 text-slate-800">Postingan Populer</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center space-x-4">
+                                    <img src="https://placehold.co/100x100/f59e0b/white?text=Spot" alt="Spot Foto" class="w-16 h-16 rounded-lg object-cover">
+                                    <div>
+                                        <a href="#" class="font-semibold text-slate-700 hover:text-amber-600 leading-tight">5 Spot Foto Tersembunyi di Jodipan</a>
+                                        <p class="text-sm text-gray-500">15 Juni 2025</p>
+                                    </div>
+                                </li>
+                                 <li class="flex items-center space-x-4">
+                                    <img src="https://placehold.co/100x100/10b981/white?text=Award" alt="Penghargaan" class="w-16 h-16 rounded-lg object-cover">
+                                    <div>
+                                        <a href="#" class="font-semibold text-slate-700 hover:text-amber-600 leading-tight">Jodipan Meraih Penghargaan...</a>
+                                        <p class="text-sm text-gray-500">5 Juni 2025</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-slate-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Kampung Warna-Warni Jodipan. Semua Hak Cipta Dilindungi.</p>
+            <p class="text-sm text-slate-400 mt-2">Didesain dengan ❤️ di Malang.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Inisialisasi Lucide Icons
+        lucide.createIcons();
+
+        // --- Logika Menu Mobile ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.remove('hidden'); mobileMenu.classList.add('flex'); });
+        const closeMenu = () => { mobileMenu.classList.add('hidden'); mobileMenu.classList.remove('flex'); }
+        closeMenuButton.addEventListener('click', closeMenu);
+        document.querySelectorAll('.mobile-nav-link').forEach(link => link.addEventListener('click', closeMenu));
+
+        // --- Logika Animasi saat Scroll ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

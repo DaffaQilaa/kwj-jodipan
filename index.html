@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Kampung Warna-Warni Jodipan</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* bg-slate-50 */
+        }
+        
+        .hero-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        .fade-in-up {
+            transform: translateY(30px);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="fixed top-0 left-0 right-0 z-50 p-4 transition-colors duration-300" id="navbar">
+        <div class="container mx-auto flex justify-between items-center text-white">
+            <!-- Logo Gambar Baru -->
+            <a href="index.html" class="transition-transform hover:scale-105">
+                <!-- Ganti src dengan path logo Anda. Ukuran direkomendasikan 120x50px -->
+                <img src="https://placehold.co/120x50/fbbf24/1e293b?text=LOGO" alt="Logo Kampung Jodipan" class="h-10">
+            </a>
+            
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="text-yellow-300 font-semibold transition-colors">Beranda</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition-colors">Galeri</a>
+                <a href="about.html" class="hover:text-yellow-300 transition-colors">Tentang Kami</a>
+                <a href="blog.html" class="hover:text-yellow-300 transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition-colors">Kontak</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="md:hidden"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-900 bg-opacity-95 z-50 hidden flex-col items-center justify-center text-white">
+        <button id="close-menu-button" class="absolute top-5 right-5"><i data-lucide="x" class="w-8 h-8"></i></button>
+        <nav class="flex flex-col space-y-8 text-2xl text-center">
+            <a href="index.html" class="mobile-nav-link text-yellow-300 font-semibold">Beranda</a>
+            <a href="gallery.html" class="mobile-nav-link hover:text-yellow-300">Galeri</a>
+            <a href="about.html" class="mobile-nav-link hover:text-yellow-300">Tentang Kami</a>
+            <a href="blog.html" class="mobile-nav-link hover:text-yellow-300">Blog</a>
+            <a href="contact.html" class="mobile-nav-link hover:text-yellow-300">Kontak</a>
+        </nav>
+    </div>
+
+    <main>
+        <section class="relative h-screen flex items-center justify-center text-white text-center overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full z-0">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                    <source src="media/videos/hero-header.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+            </div>
+            
+            <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
+            
+            <div class="relative z-20 max-w-3xl px-4">
+                <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5); animation: fadeInUp 1s ease-out;">Temukan Keajaiban Warna di Jantung Kota Malang</h2>
+                <p class="text-lg md:text-xl mb-8" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.7); animation: fadeInUp 1s ease-out 0.3s backwards;">Jelajahi setiap sudut penuh warna dan cerita di Kampung Wisata Jodipan.</p>
+                <a href="#" class="bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105" style="animation: fadeInUp 1s ease-out 0.6s backwards;">
+                    Rencanakan Kunjungan Anda
+                </a>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white animate-on-scroll fade-in-up">
+            <div class="container mx-auto px-6 text-center max-w-4xl">
+                <h3 class="text-3xl font-bold text-slate-800 mb-4">Selamat Datang di Kampung Warna-Warni Jodipan</h3>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Awalnya adalah sebuah pemukiman kumuh, Jodipan telah bertransformasi menjadi salah satu destinasi wisata paling ikonik di Malang. Berkat sentuhan kreativitas, ribuan rumah dicat dengan warna-warni cerah, menciptakan pemandangan yang memukau dan penuh kehidupan.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <a href="information.html" class="block p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center animate-on-scroll fade-in-up">
+                        <div class="bg-blue-100 text-blue-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6"><i data-lucide="ticket" class="w-10 h-10"></i></div>
+                        <h4 class="text-2xl font-bold mb-2 text-slate-800">Harga Tiket</h4>
+                        <p class="text-gray-600">Informasi lengkap mengenai tiket masuk dan jam operasional.</p>
+                    </a>
+                    <a href="attractions.html" class="block p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center animate-on-scroll fade-in-up" style="transition-delay: 150ms">
+                        <div class="bg-red-100 text-red-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6"><i data-lucide="camera" class="w-10 h-10"></i></div>
+                        <h4 class="text-2xl font-bold mb-2 text-slate-800">Daya Tarik & Aktivitas</h4>
+                        <p class="text-gray-600">Lihat daftar spot foto dan aktivitas yang wajib Anda coba.</p>
+                    </a>
+                    <a href="contact.html" class="block p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center animate-on-scroll fade-in-up" style="transition-delay: 300ms">
+                        <div class="bg-green-100 text-green-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6"><i data-lucide="map-pin" class="w-10 h-10"></i></div>
+                        <h4 class="text-2xl font-bold mb-2 text-slate-800">Lokasi & Peta</h4>
+                        <p class="text-gray-600">Temukan rute termudah menuju lokasi kami.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-16 md:py-24 bg-white animate-on-scroll fade-in-up">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-slate-800 mb-2">Sekilas Pesona Jodipan</h3>
+                    <p class="text-lg text-gray-600">Beberapa pemandangan yang akan Anda temukan.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- Gambar 1 dengan Overlay -->
+                    <div class="relative overflow-hidden rounded-lg h-52 md:h-72 group">
+                        <img src="https://placehold.co/600x400/ef4444/white?text=Jembatan+Kaca" alt="Jembatan Kaca di Jodipan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="text-white text-lg font-bold">Jembatan Kaca</h4>
+                        </div>
+                    </div>
+                     <!-- Gambar 2 dengan Overlay -->
+                    <div class="relative overflow-hidden rounded-lg h-52 md:h-72 col-span-1 md:col-span-2 group">
+                        <img src="https://placehold.co/800x400/f97316/white?text=Deretan+Rumah+Warna-Warni" alt="Rumah warna-warni dari kejauhan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="text-white text-lg font-bold">Panorama Jodipan</h4>
+                        </div>
+                    </div>
+                    <!-- Gambar 3 dengan Overlay -->
+                    <div class="relative overflow-hidden rounded-lg h-52 md:h-72 group">
+                        <img src="https://placehold.co/600x400/facc15/black?text=Mural+Kreatif" alt="Mural di dinding Jodipan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="text-white text-lg font-bold">Mural Kreatif</h4>
+                        </div>
+                    </div>
+                    <!-- Gambar 4 dengan Overlay -->
+                    <div class="relative overflow-hidden rounded-lg h-52 md:h-72 col-span-1 md:col-span-2 group">
+                        <img src="https://placehold.co/800x400/4ade80/white?text=Perahu+di+Sungai" alt="Pemandangan sungai Brantas dari Jodipan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="text-white text-lg font-bold">Pemandangan Sungai</h4>
+                        </div>
+                    </div>
+                    <!-- Gambar 5 dengan Overlay -->
+                    <div class="relative overflow-hidden rounded-lg h-52 md:h-72 group">
+                        <img src="https://placehold.co/600x400/22d3ee/white?text=Lorong+Payung" alt="Lorong dengan hiasan payung warna-warni" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="text-white text-lg font-bold">Lorong Payung</h4>
+                        </div>
+                    </div>
+                    <!-- Gambar 6 dengan Overlay -->
+                    <div class="relative overflow-hidden rounded-lg h-52 md:h-72 group">
+                        <img src="https://placehold.co/600x400/818cf8/white?text=Sudut+Estetik" alt="Sudut estetik untuk berfoto" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="text-white text-lg font-bold">Sudut Estetik</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tombol Lihat Galeri -->
+                <div class="text-center mt-12">
+                    <a href="gallery.html" class="inline-block bg-slate-800 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-slate-700 transition-all duration-300 transform hover:scale-105">
+                        Lihat Galeri Lengkap
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 animate-on-scroll fade-in-up">
+                    <h3 class="text-3xl font-bold text-slate-800 mb-2">Apa Kata Mereka?</h3>
+                    <p class="text-lg text-gray-600">Pengalaman nyata dari para pengunjung kami.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-md animate-on-scroll fade-in-up"><p class="text-gray-600 mb-4 italic">"Tempatnya keren banget, setiap sudutnya Instagramable! Warga lokal juga ramah-ramah. Wajib dikunjungi kalau ke Malang."</p><p class="font-bold text-slate-700">- Rina Setiawati</p></div>
+                    <div class="bg-white p-8 rounded-xl shadow-md animate-on-scroll fade-in-up" style="transition-delay: 150ms"><p class="text-gray-600 mb-4 italic">"Tidak menyangka kampung yang tadinya biasa saja bisa jadi seindah ini. Inspiratif! Anak-anak saya suka sekali lari-larian di sini."</p><p class="font-bold text-slate-700">- Budi Hartono</p></div>
+                    <div class="bg-white p-8 rounded-xl shadow-md animate-on-scroll fade-in-up" style="transition-delay: 300ms"><p class="text-gray-600 mb-4 italic">"Harga tiketnya sangat terjangkau untuk pemandangan yang luar biasa. Sangat direkomendasikan untuk liburan keluarga."</p><p class="font-bold text-slate-700">- Citra Lestari</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white animate-on-scroll" style="animation: fadeIn 1s;">
+            <div class="container mx-auto px-6 text-center">
+                 <h3 class="text-3xl font-bold mb-2">Ikuti Kami di Instagram</h3>
+                 <a href="https://www.instagram.com/kampung_warna_warni/" class="text-2xl font-mono block mb-8 hover:text-yellow-300 transition-colors">@kampungwarnawarnijodipan</a>
+                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 md:gap-4">
+                    <a href="https://www.instagram.com/uswamakkulawu/reel/DKzNdF8vGn9/" class="block w-full aspect-square overflow-hidden rounded-lg group"><img src="media/pictures/Image-660.jpg" alt="Postingan Instagram 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"></a>
+                    <a href="https://www.instagram.com/kampung_warna_warni/reel/DKp-lcVzGri/" class="block w-full aspect-square overflow-hidden rounded-lg group"><img src="media/pictures/Image-584.jpg" alt="Postingan Instagram 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"></a>
+                    <a href="https://www.instagram.com/rdm.k_/reel/DKHQ6IUMbSH/" class="block w-full aspect-square overflow-hidden rounded-lg group"><img src="media/pictures/Image-215.jpg" alt="Postingan Instagram 3" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"></a>
+                    <a href="https://www.instagram.com/sumud23/reel/DI2O434ybuy/" class="block w-full aspect-square overflow-hidden rounded-lg group"><img src="media/pictures/Image-124.jpg" alt="Postingan Instagram 4" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"></a>
+                    <a href="https://www.instagram.com/catch_beautifulmoments/reel/DIHUdess-H3/" class="block w-full aspect-square overflow-hidden rounded-lg group"><img src="media/pictures/Image-58.jpg" alt="Postingan Instagram 5" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"></a>
+                    <a href="https://www.instagram.com/raflyprayogo/reel/DGjuuLqzhWk/" class="block w-full aspect-square overflow-hidden rounded-lg group"><img src="media/pictures/Image-12.jpg" alt="Postingan Instagram 6" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"></a>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Kampung Warna-Warni Jodipan. Semua Hak Cipta Dilindungi.</p>
+            <p class="text-sm text-slate-400 mt-2">Didesain dengan ❤️ di Malang.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+        });
+        const closeMenu = () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        }
+        closeMenuButton.addEventListener('click', closeMenu);
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-slate-900', 'bg-opacity-80', 'backdrop-blur-sm', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-slate-900', 'bg-opacity-80', 'backdrop-blur-sm', 'shadow-lg');
+            }
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
