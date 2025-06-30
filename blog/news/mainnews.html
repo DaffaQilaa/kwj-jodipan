@@ -50,14 +50,16 @@
     <!-- Header / Navigasi -->
     <header class="sticky top-0 left-0 right-0 z-50 p-4 bg-slate-900 bg-opacity-80 backdrop-blur-sm shadow-lg">
         <div class="container mx-auto flex justify-between items-center text-white">
-            <a href="#" class="text-xl font-bold tracking-wider">JODIPAN</a>
+            <!-- Logo Gambar Baru -->
+            <a href="../../index.html" class="transition-transform hover:scale-105">
+                <!-- Ganti src dengan path logo Anda. Ukuran direkomendasikan 120x50px -->
+                <img src="media/pictures/logo-ct-dark.png" alt="Logo kwj" width="150" height="75" class="h-[75px] w-[150px] object-contain">
+            </a>
             <nav class="hidden md:flex space-x-6 items-center">
-                <a href="jodipan_homepage_v1.html" class="hover:text-yellow-300 transition-colors">Beranda</a>
-                <a href="jodipan_attractions_v1.html" class="hover:text-yellow-300 transition-colors">Daya Tarik</a>
-                <a href="jodipan_gallery_v1.html" class="hover:text-yellow-300 transition-colors">Galeri</a>
-                <a href="jodipan_about_us_v1.html" class="hover:text-yellow-300 transition-colors">Tentang Kami</a>
-                <a href="jodipan_blog_v1.html" class="text-yellow-300 font-semibold transition-colors">Blog</a>
-                <a href="jodipan_contact_v1.html" class="hover:text-yellow-300 transition-colors">Kontak</a>
+                <a href="../../index.html" class="hover:text-yellow-300 transition-colors">Beranda</a>
+                <a href="../../about.html" class="hover:text-yellow-300 transition-colors">Tentang Kami</a>
+                <a href="../../blog.html" class="text-yellow-300 font-semibold transition-colors">Blog</a>
+                <a href="../../contact.html" class="hover:text-yellow-300 transition-colors">Kontak</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden"><i data-lucide="menu" class="w-6 h-6"></i></button>
         </div>
@@ -67,12 +69,10 @@
     <div id="mobile-menu" class="fixed inset-0 bg-slate-900 bg-opacity-95 z-50 hidden flex-col items-center justify-center text-white">
         <button id="close-menu-button" class="absolute top-5 right-5"><i data-lucide="x" class="w-8 h-8"></i></button>
         <nav class="flex flex-col space-y-8 text-2xl text-center">
-            <a href="jodipan_homepage_v1.html" class="mobile-nav-link hover:text-yellow-300">Beranda</a>
-            <a href="jodipan_attractions_v1.html" class="mobile-nav-link hover:text-yellow-300">Daya Tarik</a>
-            <a href="jodipan_gallery_v1.html" class="mobile-nav-link hover:text-yellow-300">Galeri</a>
-            <a href="jodipan_about_us_v1.html" class="mobile-nav-link hover:text-yellow-300">Tentang Kami</a>
-            <a href="jodipan_blog_v1.html" class="mobile-nav-link text-yellow-300 font-semibold">Blog</a>
-            <a href="jodipan_contact_v1.html" class="mobile-nav-link hover:text-yellow-300">Kontak</a>
+            <a href="../../index.html" class="hover:text-yellow-300 transition-colors">Beranda</a>
+            <a href="../../about.html" class="hover:text-yellow-300 transition-colors">Tentang Kami</a>
+            <a href="../../blog.html" class="text-yellow-300 font-semibold transition-colors">Blog</a>
+            <a href="../../contact.html" class="hover:text-yellow-300 transition-colors">Kontak</a>
         </nav>
     </div>
 
@@ -130,9 +130,9 @@
                         <div class="bg-white p-6 rounded-xl shadow-lg animate-on-scroll fade-in-up">
                             <h3 class="text-xl font-bold mb-4 text-slate-800">Kategori</h3>
                             <ul class="space-y-3">
-                                <li><a href="jodipan_category_artikel_v1.html" class="flex justify-between items-center text-gray-600 hover:text-amber-600"><span>Artikel</span> <span class="bg-gray-100 text-xs font-semibold px-2 py-1 rounded">2</span></a></li>
-                                <li><a href="#" class="flex justify-between items-center font-semibold text-amber-600"><span>Berita</span> <span class="bg-amber-100 text-amber-700 text-xs font-semibold px-2 py-1 rounded">1</span></a></li>
-                                <li><a href="jodipan_category_page_v1.html" class="flex justify-between items-center text-gray-600 hover:text-amber-600"><span>Agenda Acara</span> <span class="bg-gray-100 text-xs font-semibold px-2 py-1 rounded">2</span></a></li>
+                                <li><a href="../article/mainarticle.html" class="flex justify-between items-center font-semibold text-amber-600"><span>Artikel</span> <span class="bg-amber-100 text-amber-700 text-xs font-semibold px-2 py-1 rounded">2</span></a></li>
+                                <li><a href="../news/mainnews.html" class="flex justify-between items-center text-gray-600 hover:text-amber-600"><span>Berita</span> <span class="bg-gray-100 text-xs font-semibold px-2 py-1 rounded">1</span></a></li>
+                                <li><a href="../event/mainevent.html" class="flex justify-between items-center text-gray-600 hover:text-amber-600"><span>Agenda Acara</span> <span class="bg-gray-100 text-xs font-semibold px-2 py-1 rounded">2</span></a></li>
                             </ul>
                         </div>
 
