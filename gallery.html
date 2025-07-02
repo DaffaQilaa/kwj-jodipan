@@ -129,8 +129,20 @@
 
     <main>
         <!-- Page Header -->
-        <section class="bg-cover bg-center text-white py-20 md:py-32" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1920x400/3b82f6/white?text=Galeri+Jodipan');">
-            <div class="container mx-auto px-6 text-center">
+       <!-- Hero Section dengan Background Video (Diperbarui) -->
+        <section class="relative flex items-center justify-center text-white text-center overflow-hidden py-20 md:py-32">
+            <!-- Video Background -->
+            <div class="absolute top-0 left-0 w-full h-full z-0">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                    <!-- Ganti 'src' dengan path video lokal Anda -->
+                    <source src="media/videos/hero-header_3.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+            </div>
+            <!-- Lapisan Overlay Gelap -->
+            <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
+            <!-- Konten Teks -->
+            <div class="relative z-20 container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-5xl font-extrabold" style="animation: fadeInUp 0.8s ease-out;">Abadikan Momen Penuh Warna</h1>
                 <p class="text-lg md:text-xl mt-4 text-slate-200 max-w-3xl mx-auto" style="animation: fadeInUp 0.8s ease-out 0.2s backwards;">Jelajahi keindahan Kampung Jodipan melalui koleksi foto dan video kami.</p>
             </div>
@@ -168,12 +180,6 @@
                                 <h4 class="text-white text-lg font-bold">Tangga Pelangi</h4>
                             </div>
                         </a>
-                        <a href="history/desc4.html" class="animate-on-scroll fade-in-up block relative overflow-hidden rounded-lg group cursor-pointer aspect-square">
-                            <img src="https://placehold.co/600x600/84cc16/white?text=Dinding+Grafiti" alt="Dinding Grafiti" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <h4 class="text-white text-lg font-bold">Dinding Grafiti</h4>
-                            </div>
-                        </a>
                         <a href="history/desc5.html" class="animate-on-scroll fade-in-up block relative overflow-hidden rounded-lg group cursor-pointer aspect-square">
                             <img src="https://placehold.co/600x600/22d3ee/white?text=Pintu+Masuk" alt="Pintu Masuk" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -199,9 +205,9 @@
                             </div>
                         </a>
                          <a href="history/desc9.html" class="animate-on-scroll fade-in-up block relative overflow-hidden rounded-lg group cursor-pointer aspect-square">
-                            <img src="https://placehold.co/600x600/e11d48/white?text=Tebing+Pinggir+Sungai" alt="Tebing Pinggir Sungai" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                            <img src="https://placehold.co/600x600/e11d48/white?text=Tebing+Pinggir+Sungai" alt="Tebing Pinggir Sungai (3D)" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <h4 class="text-white text-lg font-bold">Tebing Pinggir Sungai</h4>
+                                <h4 class="text-white text-lg font-bold">Tebing Pinggir Sungai (ikon 3D)</h4>
                             </div>
                         </a>
                          <a href="history/desc10.html" class="animate-on-scroll fade-in-up block relative overflow-hidden rounded-lg group cursor-pointer aspect-square">
@@ -231,19 +237,13 @@
                         <a href="history/desc14.html" class="animate-on-scroll fade-in-up block relative overflow-hidden rounded-lg group cursor-pointer aspect-square">
                             <img src="https://placehold.co/600x600/c2410c/white?text=Tangga+Pintu+1" alt="Tangga Pintu 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <h4 class="text-white text-lg font-bold">Tangga Pintu 1</h4>
+                                <h4 class="text-white text-lg font-bold">Halaman Ketua RW</h4>
                             </div>
                         </a>
                         <a href="history/desc15.html" class="animate-on-scroll fade-in-up block relative overflow-hidden rounded-lg group cursor-pointer aspect-square">
                             <img src="https://placehold.co/600x600/16a34a/white?text=Tangga+Jembatan" alt="Tangga Jembatan Kaca" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <h4 class="text-white text-lg font-bold">Tangga Jembatan Kaca</h4>
-                            </div>
-                        </a>
-                        <a href="history/desc16.html" class="animate-on-scroll fade-in-up block relative overflow-hidden rounded-lg group cursor-pointer aspect-square">
-                            <img src="https://placehold.co/600x600/fbbf24/white?text=Sudut+Favorit" alt="Sudut Favorit" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <h4 class="text-white text-lg font-bold">Sudut Favorit</h4>
                             </div>
                         </a>
                     </div>
@@ -273,24 +273,24 @@
                     <p class="text-lg text-gray-600 mt-2">Lihat lebih dekat kehidupan dan keindahan kampung kami.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <a href="#" class="block group relative rounded-lg overflow-hidden shadow-lg animate-on-scroll fade-in-up">
-                        <img src="https://placehold.co/1600x900/ef4444/white?text=Video+Sinematik+Jodipan" alt="Video Sinematik" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center transition-opacity duration-300 opacity-100 group-hover:opacity-100">
-                            <i data-lucide="play-circle" class="w-20 h-20 text-white opacity-80 group-hover:opacity-100 transform group-hover:scale-110 transition-transform"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="block group relative rounded-lg overflow-hidden shadow-lg animate-on-scroll fade-in-up" style="transition-delay: 150ms">
-                        <img src="https://placehold.co/1600x900/3b82f6/white?text=Drone+View" alt="Video Drone View" class="w-full h-full object-cover">
-                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center transition-opacity duration-300 opacity-100 group-hover:opacity-100">
-                            <i data-lucide="play-circle" class="w-20 h-20 text-white opacity-80 group-hover:opacity-100 transform group-hover:scale-110 transition-transform"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="block group relative rounded-lg overflow-hidden shadow-lg animate-on-scroll fade-in-up" style="transition-delay: 300ms">
-                        <img src="https://placehold.co/1600x900/10b981/white?text=Wawancara+Warga" alt="Video Wawancara Warga" class="w-full h-full object-cover">
-                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center transition-opacity duration-300 opacity-100 group-hover:opacity-100">
-                            <i data-lucide="play-circle" class="w-20 h-20 text-white opacity-80 group-hover:opacity-100 transform group-hover:scale-110 transition-transform"></i>
-                        </div>
-                    </a>
+                    <div class="block group relative rounded-lg overflow-hidden shadow-lg animate-on-scroll fade-in-up">
+                        <video class="w-full h-full object-cover" controls poster="https://placehold.co/1600x900/ef4444/white?text=Video+Sinematik+Jodipan">
+                            <source src="media\videos\kwj-cinematic.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung tag video.
+                        </video>
+                    </div>
+                    <div class="block group relative rounded-lg overflow-hidden shadow-lg animate-on-scroll fade-in-up" style="transition-delay: 150ms">
+                        <video class="w-full h-full object-cover" controls poster="https://placehold.co/1600x900/3b82f6/white?text=Drone+View">
+                            <source src="media/videos/kwj-drone.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung tag video.
+                        </video>
+                    </div>
+                    <div class="block group relative rounded-lg overflow-hidden shadow-lg animate-on-scroll fade-in-up" style="transition-delay: 300ms">
+                        <video class="w-full h-full object-cover" controls poster="https://placehold.co/1600x900/10b981/white?text=Wawancara+Warga">
+                            <source src="media\videos\kwj-wawancara.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung tag video.
+                        </video>
+                    </div>
                 </div>
             </div>
         </section>

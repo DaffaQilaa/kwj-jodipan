@@ -78,10 +78,22 @@
     </div>
 
     <main>
-        <section class="bg-cover bg-center text-white py-20 md:py-32" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1920x600/10b981/white?text=Jelajahi+Jodipan');">
-            <div class="container mx-auto px-6 text-center" style="animation: fadeInUp 0.8s ease-out;">
-                <h1 class="text-4xl md:text-5xl font-extrabold">Jelajahi Setiap Sudut Keajaiban</h1>
-                <p class="text-lg md:text-xl mt-4 text-slate-200 max-w-3xl mx-auto">Temukan spot foto ikonik dan aktivitas menarik yang tak akan terlupakan di Kampung Warna-Warni Jodipan.</p>
+        <!-- Hero Section dengan Background Video (Diperbarui) -->
+        <section class="relative flex items-center justify-center text-white text-center overflow-hidden py-20 md:py-32">
+            <!-- Video Background -->
+            <div class="absolute top-0 left-0 w-full h-full z-0">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                    <!-- Ganti 'src' dengan path video lokal Anda -->
+                    <source src="media/videos/hero-header_2.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+            </div>
+            <!-- Lapisan Overlay Gelap -->
+            <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
+            <!-- Konten Teks -->
+            <div class="relative z-20 container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold" style="animation: fadeInUp 0.8s ease-out;">Abadikan Momen Penuh Warna</h1>
+                <p class="text-lg md:text-xl mt-4 text-slate-200 max-w-3xl mx-auto" style="animation: fadeInUp 0.8s ease-out 0.2s backwards;">Jelajahi keindahan Kampung Jodipan melalui koleksi foto dan video kami.</p>
             </div>
         </section>
 
