@@ -34,11 +34,18 @@
         /* Slider Styles */
         .slider-container {
             display: flex;
+            flex-direction: row;
             transition: transform 0.5s ease-in-out;
+            /* Remove any vertical stacking */
         }
         .slide {
             flex-shrink: 0;
             width: 100%;
+            /* Ensure slides do not stack vertically */
+        }
+        #slider-container {
+            height: auto;
+            min-height: 1px;
         }
     </style>
 </head>
@@ -84,77 +91,69 @@
                         <div id="slider-container" class="slider-container">
                             <!-- Slide dengan Overlay -->
                             <div class="slide relative">
-                                <img src="../media/pictures/Tangga Pelangi/2017(1).jpg" alt="Kondisi area sebelum ada jembatan" class="w-full h-auto object-cover aspect-video">
+                                <img src="../media/pictures/Jembatan Kaca/Jembatan_2015.png" alt="Kondisi area sebelum ada jembatan" class="w-full h-auto object-cover aspect-video">
                                 <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                    <h3 class="font-bold text-lg">2017: Pembangunan Awal</h3>
-                                    <p class="text-sm text-white/90">Pewarnaan tangga sudah mulai dibangun</p>
-                                </div>
-                            </div>
-                             <!-- Slide 2 dengan Overlay -->
-                            <div class="slide relative">
-                                <img src="../media/pictures/Tangga Pelangi/2018.jpg" alt="Pembangunan jembatan" class="w-full h-auto object-cover aspect-video">
-                                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                    <h3 class="font-bold text-lg">2018: Mulai Dilirik</h3>
-                                    <p class="text-sm text-white/90">Tangga menuju bawah mulai diperhatikan.</p>
+                                    <h3 class="font-bold text-lg">2015: Sebelum Transformasi</h3>
+                                    <p class="text-sm text-white/90">Area ini masih menjadi pemisah alami antara dua kampung.</p>
                                 </div>
                             </div>
                              <!-- Slide dengan Overlay -->
                             <div class="slide relative">
-                                <img src="../media/pictures/Tangga Pelangi/2019.jpg" alt="Jembatan Kaca saat ini" class="w-full h-auto object-cover aspect-video">
+                                <img src="../media/pictures/Jembatan Kaca/Awal Pembangunan_2017.png" alt="Pembangunan jembatan" class="w-full h-auto object-cover aspect-video">
+                                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
+                                    <h3 class="font-bold text-lg">2017: Pembangunan Dimulai</h3>
+                                    <p class="text-sm text-white/90">Proyek ambisius untuk menyatukan dua kampung dimulai.</p>
+                                </div>
+                            </div>
+                            <!-- Slide dengan Overlay -->
+                            <div class="slide relative">
+                                <img src="../media/pictures/Jembatan Kaca/Jembatan_2018.jpg" alt="Kondisi area sebelum ada jembatan" class="w-full h-auto object-cover aspect-video">
+                                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
+                                    <h3 class="font-bold text-lg">2018: Pembangunan Selesai</h3>
+                                    <p class="text-sm text-white/90">Area ini telah bertransformasi menjadi jembatan yang menghubungkan dua kampung.</p>
+                                </div>
+                            </div>
+                             <!-- Slide dengan Overlay -->
+                            <div class="slide relative">
+                                <img src="../media/pictures/Jembatan Kaca/Jembatan_2019.jpg" alt="Jembatan Kaca saat ini" class="w-full h-auto object-cover aspect-video">
                                  <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                    <h3 class="font-bold text-lg">2019</h3>
+                                    <h3 class="font-bold text-lg">2019: Tetap Terjaga</h3>
                                     <p class="text-sm text-white/90">Jembatan menjadi daya tarik utama dan simbol konektivitas.</p>
                                 </div>
                             </div>
-                             <!-- Slide dengan Overlay -->
+                            <!-- Slide dengan Overlay -->
                             <div class="slide relative">
-                                <img src="../media/pictures/Tangga Pelangi/2020.jpg" alt="Jembatan Kaca saat ini" class="w-full h-auto object-cover aspect-video">
-                                 <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                    <h3 class="font-bold text-lg">2020: Masa Pandemi</h3>
-                                    <p class="text-sm text-white/90">Pandemi COVID-19 membawa tantangan baru bagi pengelola wisata.</p>
+                                <img src="../media/pictures/Jembatan Kaca/Jembatan_2021.jpg" alt="Kondisi area sebelum ada jembatan" class="w-full h-auto object-cover aspect-video">
+                                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
+                                    <h3 class="font-bold text-lg">2021: Pasca Pandemi</h3>
+                                    <p class="text-sm text-white/90">Setelah pandemi, jembatan ini kembali ramai dikunjungi dan menjadi simbol kebangkitan serta harapan baru bagi warga dan wisatawan.</p>
+                                </div>
+                            </div>
+                            <!-- Slide dengan Overlay -->
+                            <div class="slide relative">
+                                <img src="../media/pictures/Jembatan Kaca/Jembatan_2022.jpg" alt="Kondisi area sebelum ada jembatan" class="w-full h-auto object-cover aspect-video">
+                                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
+                                    <h3 class="font-bold text-lg">2022: Mulai Bangkit</h3>
+                                    <p class="text-sm text-white/90">Jembatan ini mulai menarik perhatian kembali dan menjadi tempat berkumpul yang ramai.</p>
+                                </div>
+                            </div>
+                            <!-- Slide dengan Overlay -->
+                            <div class="slide relative">
+                                <img src="../media/pictures/Jembatan Kaca/Jembatan_2023.jpg" alt="Kondisi area sebelum ada jembatan" class="w-full h-auto object-cover aspect-video">
+                                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
+                                    <h3 class="font-bold text-lg">2023: Tetap Terjaga</h3>
+                                    <p class="text-sm text-white/90">Jembatan ini tetap terjaga dan menjadi simbol ketahanan serta kebersamaan masyarakat.</p>
+                                </div>
+                            </div>
+                            <!-- Slide dengan Overlay -->
+                            <div class="slide relative">
+                                <img src="../media/pictures/Jembatan Kaca/Jembatan_2024.jpg" alt="Kondisi area sebelum ada jembatan" class="w-full h-auto object-cover aspect-video">
+                                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
+                                    <h3 class="font-bold text-lg">Sekarang: Ikon Wisata Utama</h3>
+                                    <p class="text-sm text-white/90">Jembatan ini menjadi daya tarik utama dan simbol kebangkitan pariwisata di daerah ini.</p>
                                 </div>
                             </div>
                         </div>
-                         <!-- Slide dengan Overlay -->
-                            <div class="slide relative">
-                                <img src="../media/pictures/Tangga Pelangi/2021.jpg" alt="Jembatan Kaca saat ini" class="w-full h-auto object-cover aspect-video">
-                                 <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                    <h3 class="font-bold text-lg">2021: Bangkit Kembali</h3>
-                                    <p class="text-sm text-white/90">Area ini mulai mendapatkan perhatian kembali setelah masa pandemi.</p>
-                                </div>
-                            </div>
-                         <!-- Slide dengan Overlay -->
-                            <div class="slide relative">
-                                <img src="../media/pictures/Tangga Pelangi/2022.jpg" alt="Jembatan Kaca saat ini" class="w-full h-auto object-cover aspect-video">
-                                 <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                    <h3 class="font-bold text-lg">2022: Daya Tarik Utama</h3>
-                                    <p class="text-sm text-white/90">Jembatan menjadi daya tarik utama dan simbol konektivitas.</p>
-                                </div>
-                            </div>
-                         <!-- Slide dengan Overlay -->
-                            <div class="slide relative">
-                                <img src="../media/pictures/Tangga Pelangi/2023.jpg" alt="Jembatan Kaca saat ini" class="w-full h-auto object-cover aspect-video">
-                                 <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                    <h3 class="font-bold text-lg">2023: Penambahan Atap</h3>
-                                    <p class="text-sm text-white/90">Atap tambahan dipasang untuk perlindungan dari cuaca.</p>
-                                </div>
-                            </div>
-                         <!-- Slide dengan Overlay -->
-                            <div class="slide relative">
-                                <img src="../media/pictures/Tangga Pelangi/2024.jpg" alt="Jembatan Kaca saat ini" class="w-full h-auto object-cover aspect-video">
-                                 <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                    <h3 class="font-bold text-lg">2024: Penambahan Hiasan Atap</h3>
-                                    <p class="text-sm text-white/90">Hiasan atap ditambahkan untuk meningkatkan estetika.</p>
-                                </div>
-                            </div>  
-                         <!-- Slide dengan Overlay -->
-                            <div class="slide relative">
-                                <img src="../media/pictures/Tangga Pelangi/2025.jpg" alt="Jembatan Kaca saat ini" class="w-full h-auto object-cover aspect-video">
-                                 <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                    <h3 class="font-bold text-lg">Sekarang: Ikon penghubung atas dan bawah</h3>
-                                    <p class="text-sm text-white/90"></p>
-                                </div>
-                            </div>  
                         <button id="prev-btn" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow-md z-10"><i data-lucide="chevron-left" class="w-6 h-6 text-gray-800"></i></button>
                         <button id="next-btn" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow-md z-10"><i data-lucide="chevron-right" class="w-6 h-6 text-gray-800"></i></button>
                         <div id="slide-indicator" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
