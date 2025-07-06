@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisah Jembatan Kaca - Kampung Warna-Warni Jodipan</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        /* Animasi */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-on-load {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Slider Styles */
+        .slider-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            flex-shrink: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Navigasi (Sama seperti halaman lain) -->
+    <header class="sticky top-0 left-0 right-0 z-50 p-4 bg-slate-900 bg-opacity-80 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto flex justify-between items-center text-white">
+            <!-- Logo Gambar Baru -->
+            <a href="..\..\index.html" class="transition-transform hover:scale-105">
+                <!-- Ganti src dengan path logo Anda. -->
+                <img src="..\..\media\pictures\KWJ logo.png" alt="Logo kwj" width="150" height="75" class="h-[75px] w-[150px] object-contain">
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="../index.html" class="hover:text-yellow-300 transition-colors">Beranda</a>
+                <a href="../gallery.html" class="hover:text-yellow-300 transition-colors">Galeri</a>
+            <button id="mobile-menu-button" class="md:hidden"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+    </header>
+
+    <!-- Menu Overlay Mobile (Sama seperti halaman lain) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-900 bg-opacity-95 z-50 hidden flex-col items-center justify-center text-white">
+        <button id="close-menu-button" class="absolute top-5 right-5"><i data-lucide="x" class="w-8 h-8"></i></button>
+        <nav class="flex flex-col space-y-8 text-2xl text-center">
+                <a href="../index.html" class="hover:text-yellow-300 transition-colors">Beranda</a>
+                <a href="../gallery.html" class="hover:text-yellow-300 transition-colors">Galeri</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Konten Galeri Jembatan Kaca -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <a href="../history/desc4.html" class="text-amber-600 font-semibold hover:underline flex items-center mb-8">
+                    <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
+                    Kembali ke halaman Deskripsi
+                </a>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-4">Galeri Halaman RT 7</h1>
+                <p class="text-gray-500 mb-10 text-lg">Kumpulan foto-foto Halaman RT 7 di Kampung Warna-Warni Jodipan dari berbagai sudut dan momen.</p>
+                <!-- Kontainer Grid untuk Galeri -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            
+            <!-- Daftar Gambar dari file Anda -->
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2017-1 .png" alt="Halaman RT 07 2017-1" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2017-2 .png" alt="Halaman RT 07 2017-2" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2017-3 .png" alt="Halaman RT 07 2017-3" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2017-4 .png" alt="Halaman RT 07 2017-4" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2018-1 .jpg" alt="Halaman RT 07 2018-1" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2018-2 .jpg" alt="Halaman RT 07 2018-2" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2018-3 .jpg" alt="Halaman RT 07 2018-3" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2018-4 .jpg" alt="Halaman RT 07 2018-4" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2019-1 .jpg" alt="Halaman RT 07 2019-1" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2019-2 .jpg" alt="Halaman RT 07 2019-2" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2019-3 .jpg" alt="Halaman RT 07 2019-3" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2019-4 .jpg" alt="Halaman RT 07 2019-4" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2019-5 .jpg" alt="Halaman RT 07 2019-5" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2019-6 .jpg" alt="Halaman RT 07 2019-6" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2019-7 .jpg" alt="Halaman RT 07 2019-7" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2019-8 .jpg" alt="Halaman RT 07 2019-8" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2020-1 .jpg" alt="Halaman RT 07 2020-1" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2020-2 .jpg" alt="Halaman RT 07 2020-2" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2020-3 .jpg" alt="Halaman RT 07 2020-3" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2020-4 .jpg" alt="Halaman RT 07 2020-4" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2020-5 .jpg" alt="Halaman RT 07 2020-5" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2020-6 .jpg" alt="Halaman RT 07 2020-6" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2020-7 .jpg" alt="Halaman RT 07 2020-7" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2020-8 .jpg" alt="Halaman RT 07 2020-8" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2020-9 .jpg" alt="Halaman RT 07 2020-9" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2021-1.png" alt="Halaman RT 07 2021-1" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2021-2.jpg" alt="Halaman RT 07 2021-2" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2024-1 .png" alt="Halaman RT 07 2024-1" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2025-1 .jpg" alt="Halaman RT 07 2025-1" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+            <img src="../media/pictures/Halaman RT 7/Halaman RT 07_2025-2 .jpg" alt="Halaman RT 07 2025-2" class="rounded-xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+
+        </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-300 py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Kampung Warna-Warni Jodipan. Semua Hak Cipta Dilindungi.</p>
+            <p class="text-sm text-slate-400 mt-2">Didesain dengan ❤️ di Malang.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Inisialisasi Lucide Icons
+        lucide.createIcons();
+
+        // --- Logika Menu Mobile ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.remove('hidden'); mobileMenu.classList.add('flex'); });
+        const closeMenu = () => { mobileMenu.classList.add('hidden'); mobileMenu.classList.remove('flex'); }
+        closeMenuButton.addEventListener('click', closeMenu);
+        document.querySelectorAll('.mobile-nav-link').forEach(link => link.addEventListener('click', closeMenu));
+
+        // --- Logika Animasi saat Load ---
+        document.querySelectorAll('.animate-on-load').forEach(el => {
+             el.style.opacity = '0';
+        });
+        window.addEventListener('load', () => {
+             document.querySelectorAll('.animate-on-load').forEach(el => {
+                el.style.animationPlayState = 'running';
+             });
+        });
+
+        // --- Logika Slider Gambar ---
+        const sliderContainer = document.getElementById('slider-container');
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const indicatorContainer = document.getElementById('slide-indicator');
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        // Buat indikator dots
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('w-2.5', 'h-2.5', 'rounded-full', 'transition-all', 'duration-300');
+            dot.dataset.index = i;
+            indicatorContainer.appendChild(dot);
+        }
+        const indicators = indicatorContainer.querySelectorAll('button');
+
+        function updateSlider() {
+            sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            // Update indikator
+            indicators.forEach(dot => {
+                if (parseInt(dot.dataset.index) === currentIndex) {
+                    dot.classList.add('bg-white');
+                    dot.classList.remove('bg-white/50');
+                } else {
+                    dot.classList.remove('bg-white');
+                    dot.classList.add('bg-white/50');
+                }
+            });
+        }
+        
+        // Klik tombol navigasi
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        // Klik indikator
+        indicators.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentIndex = parseInt(dot.dataset.index);
+                updateSlider();
+            })
+        })
+
+        // Inisialisasi slider
+        updateSlider();
+
+    </script>
+</body>
+</html>
