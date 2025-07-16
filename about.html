@@ -80,70 +80,116 @@
     </div>
 
     <main>
-        <!-- Page Header -->
-        <section class="bg-slate-800 text-white py-20 md:py-32">
+        <!-- Hero Section: Emotional Storytelling -->
+        <section class="bg-gradient-to-br from-slate-800 via-indigo-700 to-yellow-400 text-white py-20 md:py-32 relative overflow-hidden">
             <div class="container mx-auto px-6 text-center animate-on-load">
-                <h1 class="text-4xl md:text-5xl font-extrabold">Dari Abu-abu ke Pelangi Harapan</h1>
-                <p class="text-lg md:text-xl mt-4 text-slate-300 max-w-3xl mx-auto">Kisah nyata transformasi kampung sederhana menjadi inspirasi nasional — dimulai dari satu sapuan warna.</p>
-            </div>
-        </section>
-
-        <!-- Sejarah Jodipan -->
-        <section class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="animate-on-load" style="animation-delay: 200ms;">
-                        <h2 class="text-3xl font-bold text-slate-800 mb-4">Dari Bantaran Sungai Menjadi Kanvas Raksasa</h2>
-                        <p class="text-gray-600 leading-relaxed mb-4">
-                            Jodipan dan cerita tentang perubahan yang dimulai dari mimpi sederhana.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            Sebelum dikenal sebagai ikon wisata Kampung Warna-Warni, Jodipan hanyalah permukiman padat di 
-                            bantaran Sungai Brantas sering terabaikan, kerap dianggap biasa.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            Namun pada 2016, segalanya mulai berubah. Sekelompok mahasiswa komunikasi dari Universitas 
-                            Muhammadiyah Malang membawa sebuah ide yang sederhana namun berani: menghidupkan kembali 
-                            kampung ini lewat warna.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">     
-                            Terinspirasi dari kawasan favela di Rio de Janeiro, mereka memulai proyek sosial untuk memperindah 
-                            Jodipan. Dengan menggandeng perusahaan cat dan melibatkan langsung warga, mereka tak hanya 
-                            mewarnai tembok rumah, tapi juga membangkitkan harapan, kebanggaan, dan semangat baru di 
-                            tengah komunitas.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            Kini, dari titik yang dulu terpinggirkan, Jodipan berdiri sebagai bukti bahwa transformasi bisa dimulai 
-                            dari kreativitas, kolaborasi, dan keberanian untuk bermimpi.
-                        </p>
+                <h1 class="text-4xl md:text-5xl font-extrabold drop-shadow-lg">Dari Abu-abu ke Pelangi Harapan</h1>
+                <p class="text-lg md:text-xl mt-4 text-slate-200 max-w-3xl mx-auto font-medium">Kisah nyata transformasi kampung sederhana menjadi inspirasi nasional — dimulai dari satu sapuan warna.</p>
+                <!-- Quote overlay -->
+                <div class="mt-8 flex justify-center">
+                    <div class="bg-black/40 rounded-xl px-6 py-4 max-w-xl mx-auto text-lg italic font-semibold text-yellow-200 shadow-lg">
+                        “Dulu abu-abu, kini jadi warna-warni. Transformasi Jodipan adalah kisah tentang kreativitas yang mengubah kampung sederhana menjadi inspirasi nasional.”
                     </div>
-                    <div class="animate-on-load" style="animation-delay: 400ms;">
-                        <div class="relative overflow-hidden rounded-lg h-50 md:h-72 group">
-                        <img src="media\pictures\kwj-before.jpg" alt="Jembatan Kaca di Jodipan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h4 class="text-white text-lg font-bold">Sebelum Direvitalisasi</h4>
-                        </div>
+                </div>
+                <!-- Before-after visual -->
+                <div class="mt-12 flex flex-col md:flex-row gap-8 justify-center items-center">
+                    <div class="relative group">
+                        <img src="media/pictures/kwj-before.jpg" alt="Jodipan sebelum revitalisasi" class="w-72 h-48 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute bottom-2 left-2 bg-black/60 text-white px-3 py-1 rounded font-bold text-sm">Sebelum</span>
                     </div>
-                    <div class="animate-on-load" style="animation-delay: 400ms;">
-                        <div class="relative overflow-hidden rounded-lg h-50 md:h-72 group">
-                        <img src="media\pictures\kwj-after.webp" alt="Jembatan Kaca di Jodipan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h4 class="text-white text-lg font-bold">Setelah Direvitalisasi</h4>
-                        </div>
-                    </div>
+                    <div class="relative group">
+                        <img src="media/pictures/kwj-after.webp" alt="Jodipan setelah revitalisasi" class="w-72 h-48 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute bottom-2 left-2 bg-yellow-500/80 text-white px-3 py-1 rounded font-bold text-sm">Sesudah</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Visi & Misi -->
+        <!-- Story Block: Cerita dari Tembok-Tembok yang Bicara -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-on-load">
+                    <h2 class="text-3xl font-bold text-indigo-700 mb-4">Cerita dari Tembok-Tembok yang Bicara</h2>
+                    <p class="text-gray-700 text-lg mb-4">Setiap warna di Jodipan menyimpan harapan, gotong royong, dan mimpi warga.</p>
+                    <blockquote class="border-l-4 border-yellow-400 pl-4 italic text-slate-600 font-medium mb-4">
+                        “Tembok yang dulu kelabu, kini jadi kanvas harapan.”
+                    </blockquote>
+                    <p class="text-gray-600 leading-relaxed">
+                        Proyek sosial yang digagas mahasiswa UMM dan didukung warga serta mitra, mengubah bukan hanya tampilan kampung, tapi juga semangat komunitas. Kolaborasi ini membangkitkan rasa bangga dan gotong royong yang kini menjadi identitas Jodipan.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <img src="media/pictures/tembok-warna.jpg" alt="Tembok warna-warni Jodipan" class="rounded-lg shadow-lg object-cover h-64 w-full">
+                    <img src="media/pictures/warga-gotongroyong.jpg" alt="Warga gotong royong" class="rounded-lg shadow-lg object-cover h-32 w-full">
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Block: Cerita di Balik Warna-Warni Jodipan -->
+        <section class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex flex-col gap-6 order-2 md:order-1">
+                    <img src="media/pictures/kolaborasi.jpg" alt="Kolaborasi warga dan mahasiswa" class="rounded-lg shadow-lg object-cover h-64 w-full">
+                    <img src="media/pictures/aktivitas-kampung.jpg" alt="Aktivitas warga Jodipan" class="rounded-lg shadow-lg object-cover h-32 w-full">
+                </div>
+                <div class="animate-on-load order-1 md:order-2">
+                    <h2 class="text-3xl font-bold text-indigo-700 mb-4">Cerita di Balik Warna-Warni Jodipan</h2>
+                    <p class="text-gray-700 text-lg mb-4">Temukan bagaimana kreativitas dan kolaborasi mengubah wajah kampung menjadi ruang inspiratif.</p>
+                    <blockquote class="border-l-4 border-indigo-400 pl-4 italic text-slate-600 font-medium mb-4">
+                        “Transformasi ini memberi harapan baru.”
+                    </blockquote>
+                    <p class="text-gray-600 leading-relaxed">
+                        Dari ide sederhana, Jodipan kini menjadi contoh nasional tentang kekuatan kreativitas dan kolaborasi lintas komunitas. Setiap sudut kampung adalah bukti nyata perubahan yang bisa terjadi jika semua pihak bersatu.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scroll Journey: Buah dari Kreativitas -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-800">Buah dari Kreativitas</h2>
+                    <p class="text-lg text-gray-600 mt-2">Bagaimana pariwisata mengubah wajah dan masa depan Jodipan.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Perekonomian Tumbuh Bersama -->
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-md flex flex-col items-center animate-on-load">
+                        <img src="media/pictures/warung-warga.jpg" alt="Warung warga Jodipan" class="w-24 h-24 object-cover rounded-full mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold text-yellow-700 mb-2">Perekonomian Tumbuh Bersama</h3>
+                        <p class="text-gray-600 text-center">Warung lokal, toko suvenir, hingga layanan parkir kini dikelola langsung oleh warga. Hadirnya wisatawan membuka peluang usaha yang nyata dan berkelanjutan, meningkatkan pendapatan keluarga dan menggerakkan roda ekonomi kampung.</p>
+                    </div>
+                    <!-- Komunitas yang Lebih Solid -->
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-md flex flex-col items-center animate-on-load">
+                        <img src="media/pictures/komunitas-solid.jpg" alt="Komunitas Jodipan" class="w-24 h-24 object-cover rounded-full mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold text-green-700 mb-2">Komunitas yang Lebih Solid</h3>
+                        <p class="text-gray-600 text-center">Warga kini bangga dengan kampungnya. Semangat gotong royong tumbuh kuat, memupuk rasa memiliki dan tanggung jawab bersama untuk menjaga keindahan serta kelestarian lingkungan tempat tinggal.</p>
+                    </div>
+                    <!-- Dari Tepi Sungai ke Pusat Inspirasi -->
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-md flex flex-col items-center animate-on-load">
+                        <img src="media/pictures/jodipan-udara.jpg" alt="Jodipan dari udara" class="w-24 h-24 object-cover rounded-full mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold text-indigo-700 mb-2">Dari Tepi Sungai ke Pusat Inspirasi</h3>
+                        <p class="text-gray-600 text-center">Dulu dipandang sebelah mata, kini Jodipan dikenal luas sebagai ikon wisata kreatif. Transformasi ini mengubah citra kawasan, memberi harapan baru, dan menginspirasi banyak daerah lain untuk berbenah dan berdaya.</p>
+                    </div>
+                </div>
+                <!-- Quotes slider/caption -->
+                <div class="mt-12 flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <div class="bg-indigo-700/80 text-white px-6 py-4 rounded-xl text-lg font-semibold shadow-lg max-w-md mx-auto italic">
+                        “Dulu dipandang sebelah mata, kini Jodipan dikenal luas.”
+                    </div>
+                    <div class="bg-yellow-500/80 text-white px-6 py-4 rounded-xl text-lg font-semibold shadow-lg max-w-md mx-auto italic">
+                        “Transformasi ini memberi harapan baru.”
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visi & Misi Section (Formal) -->
         <section class="py-16 md:py-24 bg-slate-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-slate-800">Tujuan dan Impian Kami</h2>
-                    <p class="text-lg text-gray-600 mt-2">Kami percaya bahwa wisata bukan hanya soal pemandangan indah, tapi juga tentang perubahan. Di 
-                    Kampung Warna-Warni Jodipan, kami membangun harapan, memberdayakan warga, dan menjaga 
-                    lingkungan, semuanya berawal dari warna.</p>
+                    <h2 class="text-3xl font-bold text-slate-800">Tujuan Kami</h2>
+                    <p class="text-lg text-gray-600 mt-2">Kami percaya bahwa wisata bukan hanya soal pemandangan indah, tapi juga tentang perubahan. Di Kampung Warna-Warni Jodipan, kami membangun harapan, memberdayakan warga, dan menjaga lingkungan, semuanya berawal dari warna.</p>
                 </div>
                 <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
                     <!-- Visi -->
@@ -155,8 +201,7 @@
                             <h3 class="text-2xl font-bold ml-4 text-slate-700">Visi</h3>
                         </div>
                         <p class="text-gray-600">
-                            Menjadi destinasi wisata berbasis komunitas yang berdaya, berkelanjutan, dan menginspirasi 
-                        perubahan sosial positif, baik di tingkat nasional maupun internasional.
+                            Menjadi destinasi wisata berbasis komunitas yang berdaya, berkelanjutan, dan menginspirasi perubahan sosial positif, baik di tingkat nasional maupun internasional.
                         </p>
                     </div>
                     <!-- Misi -->
@@ -170,8 +215,38 @@
                         <ul class="list-inside text-gray-600 space-y-2">
                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0"></i>Mendorong pertumbuhan ekonomi lokal melalui pariwisata kreatif.</li>
                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0"></i>Menjaga kelestarian lingkungan dan budaya kampung.</li>
-                           <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0"></i>Menyajikan pengalaman yang otentik, inklusif, dan berkesan bagi setiap pengunjung.   </li>
+                           <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0"></i>Menyajikan pengalaman yang otentik, inklusif, dan berkesan bagi setiap pengunjung.</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visi & Misi Section (Naratif Humanis, opsional) -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-on-load">
+                    <h2 class="text-3xl font-bold text-indigo-700 mb-4">Apa yang Kami Percaya</h2>
+                    <p class="text-gray-700 text-lg mb-4">Prinsip yang memandu warna-warni langkah kami.</p>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Kami percaya bahwa wisata tidak hanya soal tempat, tapi juga tentang dampak. Di Kampung Warna-Warni Jodipan, kami menghadirkan pengalaman yang autentik bagi pengunjung — sekaligus menciptakan perubahan nyata bagi warga.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Visi kami sederhana: menjadi destinasi wisata berbasis komunitas yang mandiri, kreatif, dan memberi inspirasi positif, dari kampung kecil ke dunia yang lebih besar.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="bg-blue-100 p-4 rounded-lg shadow flex items-center gap-4">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-blue-600"></i>
+                        <span class="text-slate-700 font-semibold">Pemberdayaan ekonomi warga</span>
+                    </div>
+                    <div class="bg-green-100 p-4 rounded-lg shadow flex items-center gap-4">
+                        <i data-lucide="leaf" class="w-8 h-8 text-green-600"></i>
+                        <span class="text-slate-700 font-semibold">Pelestarian lingkungan & budaya lokal</span>
+                    </div>
+                    <div class="bg-yellow-100 p-4 rounded-lg shadow flex items-center gap-4">
+                        <i data-lucide="star" class="w-8 h-8 text-yellow-600"></i>
+                        <span class="text-slate-700 font-semibold">Penyajian pengalaman yang unik dan berkesan</span>
                     </div>
                 </div>
             </div>
