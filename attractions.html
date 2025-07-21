@@ -177,7 +177,11 @@
                     </div>
                     <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg animate-on-scroll fade-in-up" style="transition-delay: 150ms;">
                         <div id="map-image-container" class="mb-6 rounded-lg overflow-hidden">
-                            <img src="https://placehold.co/1200x800/e0e7ff/3730a3?text=Peta+Jodipan+dengan+Spot+1" id="interactive-map-image" alt="Peta Interaktif Jodipan" class="w-full object-cover">
+                            <!-- Semua gambar untuk tiap spot, hanya satu yang tampil -->
+                            <img src="media/pictures/Andri Anursyah (Jembatan Kaca)/Jembatan kaca 2024.PNG" id="map-img-jembatan" alt="Peta Jembatan Kaca" class="w-full object-cover map-img" style="display:block;">
+                            <img src="media/pictures/jdp-wall4.jpg" id="map-img-tembok" alt="Peta Tembok Warna-Warni" class="w-full object-cover map-img" style="display:none;">
+                            <img src="media/pictures/Lorong Payung/Pos 6_2019.jpeg" id="map-img-payung" alt="Peta Lorong Payung Gantung" class="w-full object-cover map-img" style="display:none;">
+                            <img src="media/pictures/Taman Bingkai/Taman Bingkai_2025.jpg" id="map-img-mural" alt="Peta Mural 3D" class="w-full object-cover map-img" style="display:none;">
                         </div>
                         <div id="map-info-container">
                             <div class="map-info" id="info-jembatan">
@@ -233,16 +237,14 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.animate-on-scroll').forEach(el => { observer.observe(el); });
 
-        // --- Logika Peta Interaktif ---
+        // --- Logika Peta Interaktif (update untuk multi gambar) ---
         const spotButtons = document.querySelectorAll('.map-spot-button');
         const infoPanels = document.querySelectorAll('.map-info');
-        const mapImage = document.getElementById('interactive-map-image');
-        
-        const mapImageSources = {
-            jembatan: 'https://placehold.co/1200x800/ef4444/white?text=Lokasi+Jembatan+Kaca',
-            tembok: 'https://placehold.co/1200x800/f97316/white?text=Area+Tembok+Warna-Warni',
-            payung: 'https://placehold.co/1200x800/22d3ee/white?text=Lokasi+Payung+Gantung',
-            mural: 'https://placehold.co/1200x800/8b5cf6/white?text=Lokasi+Mural+3D'
+        const mapImgs = {
+            jembatan: document.getElementById('map-img-jembatan'),
+            tembok: document.getElementById('map-img-tembok'),
+            payung: document.getElementById('map-img-payung'),
+            mural: document.getElementById('map-img-mural')
         };
 
         spotButtons.forEach(button => {
@@ -262,10 +264,10 @@
                     }
                 });
 
-                // Update gambar peta
-                if (mapImageSources[spot]) {
-                    mapImage.src = mapImageSources[spot];
-                }
+                // Tampilkan gambar sesuai spot
+                Object.keys(mapImgs).forEach(key => {
+                    mapImgs[key].style.display = (key === spot) ? 'block' : 'none';
+                });
             });
         });
     </script>
